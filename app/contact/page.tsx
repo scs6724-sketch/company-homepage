@@ -57,7 +57,7 @@ export default function ContactPage() {
   console.log(error)
   return
 }
-await fetch("/api/telegram", {
+await fetch("https://company-homepage-three.vercel.app/api/telegram", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
