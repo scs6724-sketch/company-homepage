@@ -57,11 +57,10 @@ export default function ContactPage() {
   console.log(error)
   return
 }
-await fetch(`https://api.telegram.org/bot8702522926:AAGV-VwInfe4MCTjd2uUUfuVSSeVIHn3WZg/sendMessage`, {
+await fetch("/api/telegram", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
-    chat_id: "8139494387",
     text: `📩 새 문의
 
 상호명: ${formData.get("company")}
