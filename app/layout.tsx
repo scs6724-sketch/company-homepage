@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "K-LIGHT",
-  description: "Industrial Gobo Light System",
+  title: "케이라이트",
+  description: "이미지글래스 제작 전문기업",
 }
 
 export default function RootLayout({
@@ -24,44 +24,27 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html
-      lang="ko"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-white">
+    <html lang="ko" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className="bg-white">
+        <header className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur border-b z-50">
+          <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <Link href="/" className="font-bold text-xl">
+              케이라이트
+            </Link>
 
-        {/* 상단 고정 네비게이션 */}
-        <header className="fixed top-0 left-0 w-full bg-white border-b z-50">
-          <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-
-            <div className="font-bold text-xl tracking-wide">
-              K-LIGHT
-            </div>
-
-            <nav className="flex gap-3">
-
-              <Link href="/">
-                <button className="px-4 py-2 rounded-xl border hover:bg-black hover:text-white transition">
-                  홈
-                </button>
+            <nav className="hidden md:flex gap-4 text-sm items-center">
+              <Link href="/about">기업소개</Link>
+              <Link href="/products">제품소개</Link>
+              <Link href="/glass">이미지글래스</Link>
+              <Link href="/portfolio">포트폴리오</Link>
+              <Link href="/contact" className="px-4 py-2 bg-black text-white rounded-xl">
+                견적문의
               </Link>
-
-              <Link href="/contact">
-                <button className="px-4 py-2 rounded-xl border hover:bg-black hover:text-white transition">
-                  문의
-                </button>
-              </Link>
-
             </nav>
-
           </div>
         </header>
 
-        {/* 페이지 본문 (헤더 공간 확보) */}
-        <main className="pt-24 flex-1">
-          {children}
-        </main>
-
+        <main className="pt-16">{children}</main>
       </body>
     </html>
   )
