@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-black">
 
-      {/* HERO SLIDER */}
+      {/* HERO */}
       <section className="relative h-screen w-full overflow-hidden">
 
         <img
@@ -131,38 +131,101 @@ export default function Home() {
 
       </section>
 
-      {/* MAP (진짜 지도 표시 버전) */}
-      <section className="py-24 bg-black text-white px-8">
+      {/* LOCATION (고급형) */}
+      <section className="py-28 bg-neutral-950 text-white px-8">
 
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto">
 
-          <h2 className="text-5xl font-bold mb-8">
-            오시는 길
-          </h2>
+          <div className="text-center mb-14">
+            <p className="tracking-[0.3em] text-sm text-zinc-500 mb-4">
+              LOCATION
+            </p>
 
-          <p className="text-zinc-400 mb-10">
-            K-LIGHT 위치 안내
-          </p>
+            <h2 className="text-5xl font-bold mb-4">
+              오시는 길
+            </h2>
 
-          {/* 지도 실제 표시 */}
-          <div className="w-full h-[450px] rounded-3xl overflow-hidden shadow-lg mb-8">
-
-            <iframe
-              src="https://map.kakao.com/link/map/케이라이트"
-              className="w-full h-full"
-              loading="lazy"
-            />
-
+            <p className="text-zinc-400">
+              방문 상담 및 제작 문의는 아래 위치 정보를 확인해주세요.
+            </p>
           </div>
 
-          {/* 보조 버튼 */}
-          <a
-            href="https://kko.to/UfFg41qVMo"
-            target="_blank"
-            className="inline-block px-8 py-4 bg-white text-black rounded-2xl font-semibold hover:opacity-80 transition"
-          >
-            카카오맵으로 길찾기
-          </a>
+          <div className="grid md:grid-cols-2 gap-8">
+
+            {/* 지도 카드 */}
+            <div className="rounded-3xl bg-neutral-900 border border-neutral-800 p-10 flex flex-col justify-center items-center text-center">
+
+              <div className="text-6xl mb-6">📍</div>
+
+              <h3 className="text-3xl font-bold mb-4">
+                K-LIGHT
+              </h3>
+
+              <p className="text-zinc-400 mb-8">
+                카카오맵에서 정확한 위치를 확인하실 수 있습니다.
+              </p>
+
+              <a
+                href="https://kko.to/UfFg41qVMo"
+                target="_blank"
+                className="px-8 py-4 bg-white text-black rounded-2xl font-semibold hover:opacity-80 transition"
+              >
+                카카오맵으로 위치 보기
+              </a>
+
+            </div>
+
+            {/* 회사 정보 */}
+            <div className="rounded-3xl bg-white text-black p-10 shadow-xl">
+
+              <h3 className="text-3xl font-bold mb-8">
+                Contact Information
+              </h3>
+
+              <div className="space-y-6">
+
+                <div>
+                  <p className="text-sm text-gray-500">Company</p>
+                  <p className="font-semibold">K-LIGHT</p>
+                </div>
+
+                <div>
+                  <p className="text-sm text-gray-500">Service</p>
+                  <p className="font-semibold">고보조명 · 이미지글래스 제작</p>
+                </div>
+
+                <div>
+                  <p className="text-sm text-gray-500">Email</p>
+                  <p className="font-semibold">contact@company.com</p>
+                </div>
+
+                <div>
+                  <p className="text-sm text-gray-500">Tel</p>
+                  <p className="font-semibold">02-000-0000</p>
+                </div>
+
+              </div>
+
+              <div className="mt-10 flex gap-4">
+                <a
+                  href="/contact"
+                  className="flex-1 text-center py-4 rounded-2xl bg-black text-white font-semibold"
+                >
+                  제작 문의
+                </a>
+
+                <a
+                  href="https://kko.to/UfFg41qVMo"
+                  target="_blank"
+                  className="flex-1 text-center py-4 rounded-2xl border font-semibold"
+                >
+                  길찾기
+                </a>
+              </div>
+
+            </div>
+
+          </div>
 
         </div>
 
