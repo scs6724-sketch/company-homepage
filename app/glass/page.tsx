@@ -1,96 +1,138 @@
-import Link from "next/link"
+import Link from "next/link";
 
-export default function GlassPage() {
+export default function glass() {
+  const features = [
+    "로고 및 브랜드 이미지 제작",
+    "실내외 고보조명 적용 가능",
+    "현장 목적에 맞춘 맞춤 제작",
+  ];
+
+  const steps = ["상담", "도안 확인", "제작", "검수 및 출고"];
+
   return (
-    <main className="bg-white text-black">
+    <main className="bg-neutral-950 text-white">
+      <section className="relative overflow-hidden px-6 py-36">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.18),transparent_35%)]"></div>
 
-      <section className="py-32 px-8 bg-black text-white">
-        <div className="max-w-6xl mx-auto">
-          <p className="tracking-[0.3em] text-sm text-zinc-400 mb-6">
+        <div className="relative mx-auto max-w-7xl">
+          <p className="mb-5 text-sm font-bold tracking-[0.35em] text-zinc-500">
             IMAGE GLASS
           </p>
 
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            선명한 투사를 위한<br />
+          <h1 className="max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
+            선명한 투사를 위한
+            <br />
             이미지글래스 제작
           </h1>
 
-          <p className="text-lg text-zinc-400 max-w-3xl leading-8">
-            고보조명의 핵심은 이미지 품질입니다. 케이라이트는 용도와 환경에 맞는
-            이미지글래스를 정성껏 제작합니다.
+          <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-400">
+            고보조명의 핵심은 이미지 품질입니다. 케이라이트는 로고, 문구, 패턴을 조명 투사에 적합한 이미지글래스로 제작합니다.
           </p>
         </div>
       </section>
 
-      <section className="py-28 px-8">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-
-          <div className="h-[520px] bg-gray-200 rounded-[32px] flex items-center justify-center text-gray-500 text-2xl">
-            이미지글래스 사진 영역
+      <section className="px-6 pb-28">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2 lg:items-center">
+          <div className="group overflow-hidden rounded-[40px] border border-white/10 bg-white/[0.04] shadow-2xl">
+            <img
+              src="/images/2.jpg"
+              alt="이미지글래스 제작 이미지"
+              className="h-[560px] w-full object-cover transition duration-700 group-hover:scale-105"
+            />
           </div>
 
           <div>
-            <h2 className="text-4xl font-bold mb-6">
+            <p className="mb-4 text-sm font-bold text-zinc-500">
+              CUSTOM IMAGE GLASS
+            </p>
+
+            <h2 className="text-4xl font-black leading-tight md:text-5xl">
+              조명 환경에 맞춘
+              <br />
               맞춤형 이미지글래스
             </h2>
 
-            <p className="text-lg text-gray-600 leading-8 mb-8">
-              로고, 패턴, 안내 문구, 사인 이미지 등 다양한 이미지를 조명 투사에 적합하도록 제작합니다.
-              단순 출력물이 아닌 조명 환경에 맞춘 선명도와 내구성을 고려합니다.
+            <p className="mt-6 text-lg leading-8 text-zinc-400">
+              단순 출력물이 아니라 투사 거리, 밝기, 설치 환경을 고려해 이미지 선명도와 완성도를 높이는 방향으로 제작합니다.
             </p>
 
-            <div className="space-y-4">
-              <div className="p-5 rounded-2xl border">
-                로고 및 브랜드 이미지 제작
-              </div>
+            <div className="mt-10 space-y-4">
+              {features.map((feature, index) => (
+                <div
+                  key={feature}
+                  className="flex items-center gap-5 rounded-3xl border border-white/10 bg-white/[0.04] p-5"
+                >
+                  <p className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-sm font-black text-black">
+                    {index + 1}
+                  </p>
 
-              <div className="p-5 rounded-2xl border">
-                실내외 고보조명 적용 가능
-              </div>
-
-              <div className="p-5 rounded-2xl border">
-                현장 목적에 맞춘 맞춤 제작
-              </div>
+                  <p className="font-bold">{feature}</p>
+                </div>
+              ))}
             </div>
           </div>
-
         </div>
       </section>
 
-      <section className="py-28 px-8 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
+      <section className="px-6 pb-28">
+        <div className="mx-auto max-w-7xl rounded-[40px] bg-white p-10 text-black md:p-16">
+          <div className="mb-12 text-center">
+            <p className="mb-4 text-sm font-bold text-zinc-500">
+              PROCESS
+            </p>
 
-          <h2 className="text-4xl font-bold mb-12 text-center">
-            제작 프로세스
-          </h2>
+            <h2 className="text-4xl font-black md:text-5xl">
+              제작 프로세스
+            </h2>
+          </div>
 
-          <div className="grid md:grid-cols-4 gap-6 text-center">
-            {["상담", "도안 확인", "제작", "검수 및 출고"].map((step, i) => (
-              <div key={step} className="p-8 bg-white rounded-3xl shadow">
-                <p className="text-4xl font-bold mb-4">
-                  0{i + 1}
+          <div className="grid gap-5 md:grid-cols-4">
+            {steps.map((step, index) => (
+              <div
+                key={step}
+                className="rounded-3xl border border-zinc-200 bg-zinc-50 p-8 text-center"
+              >
+                <p className="text-4xl font-black text-zinc-300">
+                  0{index + 1}
                 </p>
-                <p>{step}</p>
+
+                <p className="mt-5 text-xl font-black">{step}</p>
               </div>
             ))}
           </div>
-
         </div>
       </section>
 
-      <section className="py-28 bg-black text-white text-center px-8">
-        <h2 className="text-4xl font-bold mb-6">
-          이미지글래스 제작이 필요하신가요?
-        </h2>
+      <section className="px-6 pb-28">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-[40px] border border-white/10 bg-white/[0.04] p-10 md:p-16">
+          <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center">
+            <div>
+              <p className="mb-4 text-sm font-bold text-zinc-500">
+                REQUEST
+              </p>
 
-        <Link
-          href="/contact"
-          className="inline-block px-10 py-4 bg-white text-black rounded-2xl font-semibold"
-        >
-          견적 문의하기
-        </Link>
+              <h2 className="text-4xl font-black leading-tight md:text-5xl">
+                이미지글래스 제작이
+                <br />
+                필요하신가요?
+              </h2>
+
+              <p className="mt-6 max-w-2xl leading-8 text-zinc-400">
+                사용하실 로고나 이미지를 보내주시면 제작 가능 여부와 적합한 진행 방향을 안내드립니다.
+              </p>
+            </div>
+
+            <div className="flex md:justify-end">
+              <Link
+                href="/contact"
+                className="rounded-full bg-white px-9 py-4 font-bold text-black transition hover:bg-zinc-200"
+              >
+                견적 문의하기
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
-
     </main>
-  )
+  );
 }

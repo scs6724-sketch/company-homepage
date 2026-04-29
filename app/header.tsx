@@ -22,6 +22,7 @@ export default function header() {
         </button>
 
         <nav className="hidden items-center gap-8 text-base font-semibold lg:flex">
+          <Link href="/">홈</Link>
           <Link href="/about">기업소개</Link>
           <Link href="/products">제품소개</Link>
           <Link href="/glass">이미지글래스</Link>
@@ -37,6 +38,9 @@ export default function header() {
 
       {open && (
         <div className="flex flex-col items-center gap-4 border-t bg-white pb-6 lg:hidden">
+          <Link href="/" onClick={() => setopen(false)}>
+            홈
+          </Link>
           <Link href="/about" onClick={() => setopen(false)}>
             기업소개
           </Link>
