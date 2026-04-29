@@ -1,34 +1,27 @@
-import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
-import Header from "./header"
-import "./globals.css"
+import "./globals.css";
+import header from "./header";
+import floatingbutton from "./floatingbutton";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-})
+const Siteheader = header;
+const Floatingbutton = floatingbutton;
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-})
-
-export const metadata: Metadata = {
+export const metadata = {
   title: "케이라이트",
-  description: "이미지글래스 제작 전문기업",
-}
+  description: "고보라이트 · 이미지글래스 · 특수조명 제작",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body className="bg-white">
-        <Header />
-        <main className="pt-16">{children}</main>
+    <html lang="ko">
+      <body>
+        <Siteheader />
+        {children}
+        <Floatingbutton />
       </body>
     </html>
-  )
+  );
 }
