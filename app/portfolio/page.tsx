@@ -1,134 +1,144 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 export default function portfolio() {
-  const projects = [
-    {
-      image: "/images/1.jpg",
-      title: "매장 로고 고보라이트",
-      category: "Gobo Light",
-      desc: "브랜드 로고를 바닥과 벽면에 선명하게 투사한 제작 사례입니다.",
-    },
-    {
-      image: "/images/2.jpg",
-      title: "이미지글래스 제작",
-      category: "Image Glass",
-      desc: "원하는 이미지와 문구를 유리에 담아 조명 효과를 극대화했습니다.",
-    },
-    {
-      image: "/images/3.jpg",
-      title: "행사장 특수조명",
-      category: "Event Lighting",
-      desc: "행사 공간 분위기에 맞춰 시선이 모이는 조명 연출을 적용했습니다.",
-    },
-    {
-      image: "/images/4.jpg",
-      title: "카페 입구 포인트 조명",
-      category: "Store Lighting",
-      desc: "입구 동선에 맞춰 고객이 바로 인식할 수 있는 포인트를 만들었습니다.",
-    },
-    {
-      image: "/images/5.jpg",
-      title: "브랜드 공간 연출",
-      category: "Brand Space",
-      desc: "공간의 첫인상과 브랜드 이미지를 함께 살린 제작 사례입니다.",
-    },
-    {
-      image: "/images/1.jpg",
-      title: "맞춤 문구 투사",
-      category: "Custom Design",
-      desc: "로고, 문구, 안내 이미지를 목적에 맞게 제작해 투사했습니다.",
-    },
+  const [showmore, setshowmore] = useState(false);
+
+  const mainimages = [
+    "/images/portfolio1.jpg",
+    "/images/portfolio2.jpg",
+    "/images/portfolio3.jpg",
+    "/images/portfolio4.jpeg",
+    "/images/portfolio5.jpg",
+    "/images/portfolio6.jpg",
+    "/images/portfolio7.jpg",
+    "/images/portfolio8.jpg",
+    "/images/portfolio9.png",
+    "/images/portfolio10.jpg",
+    "/images/portfolio11.jpg",
+    "/images/portfolio12.png",
+    "/images/portfolio13.jpg",
+    "/images/portfolio14.png",
+    "/images/portfolio15.jpg",
+    "/images/portfolio16.jpg",
+    "/images/portfolio17.jpg",
+    "/images/portfolio18.jpg",
   ];
 
-  return (
-    <main className="bg-neutral-950 text-white">
-      <section className="relative overflow-hidden px-6 py-36">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.16),transparent_35%)]"></div>
+  const moreimages = [
+    "/images/portfolio19.jpg",
+    "/images/portfolio20.jpg",
+    "/images/portfolio21.jpg",
+    "/images/portfolio22.png",
+    "/images/portfolio23.jpg",
+    "/images/portfolio24.jpg",
+    "/images/portfolio25.jpg",
+    "/images/portfolio26.jpg",
+    "/images/portfolio27.jpg",
+    "/images/portfolio28.jpg",
+    "/images/portfolio29.jpg",
+    "/images/portfolio30.jpg",
+    "/images/portfolio31.jpeg",
+    "/images/portfolio32.jpg",
+    "/images/portfolio33.jpg",
+    "/images/portfolio34.jpg",
+    "/images/portfolio35.jpg",
+    "/images/portfolio36.jpg",
+    "/images/portfolio37.jpg",
+    "/images/portfolio38.jpg",
+    "/images/portfolio39.jpg",
+    "/images/portfolio40.png",
+    "/images/portfolio41.jpg",
+    "/images/portfolio42.jpg",
+    "/images/portfolio43.jpg",
+    "/images/portfolio44.jpg",
+    "/images/portfolio45.jpg",
+    "/images/portfolio46.jpg",
+    "/images/portfolio47.jpg",
+    "/images/portfolio48.png",
+  ];
 
-        <div className="relative mx-auto max-w-7xl">
-          <p className="mb-5 text-sm font-bold tracking-[0.35em] text-zinc-500">
+  const images = showmore ? [...mainimages, ...moreimages] : mainimages;
+
+  return (
+    <main className="bg-white text-black">
+
+      <section className="px-6 py-32 bg-gray-50">
+        <div className="mx-auto max-w-7xl">
+          <p className="mb-4 text-sm font-bold text-gray-400">
             PORTFOLIO
           </p>
 
-          <h1 className="max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
-            실제 공간에 적용된
-            <br />
-            케이라이트 제작 사례
+          <h1 className="text-5xl font-bold md:text-6xl mb-6">
+            제작 및 시공 사례
           </h1>
 
-          <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-400">
-            고보라이트, 이미지글래스, 특수조명 제작 사례를 통해 공간에 맞는 조명 연출 방향을 확인하실 수 있습니다.
+          <p className="text-lg text-gray-500 max-w-2xl leading-8">
+            다양한 현장에서 적용된 고보라이트 및 이미지글래스 제작 사례입니다.
           </p>
         </div>
       </section>
 
-      <section className="px-6 pb-28">
+      <section className="px-6 pb-20">
         <div className="mx-auto max-w-7xl">
+
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project, index) => (
-              <article
-                key={`${project.title}-${index}`}
-                className={`group overflow-hidden rounded-[34px] border border-white/10 bg-white/[0.04] shadow-2xl ${
-                  index === 0 ? "md:col-span-2 lg:col-span-2" : ""
+
+            {images.map((src, index) => (
+              <div
+                key={index}
+                className={`group overflow-hidden rounded-[28px] bg-gray-100 ${
+                  index < 2 ? "md:col-span-2 lg:col-span-2" : ""
                 }`}
               >
-                <div className="overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className={`w-full object-cover transition duration-700 group-hover:scale-105 ${
-                      index === 0 ? "h-[520px]" : "h-[340px]"
-                    }`}
-                  />
-                </div>
-
-                <div className="p-7">
-                  <p className="mb-3 text-sm font-bold text-zinc-500">
-                    {project.category}
-                  </p>
-
-                  <h3 className="text-2xl font-black">{project.title}</h3>
-
-                  <p className="mt-4 leading-7 text-zinc-400">
-                    {project.desc}
-                  </p>
-                </div>
-              </article>
+                <img
+                  src={src}
+                  className={`w-full object-cover transition duration-500 group-hover:scale-105 ${
+                    index < 2 ? "h-[500px]" : "h-[320px]"
+                  }`}
+                />
+              </div>
             ))}
+
           </div>
+
+          {!showmore && (
+            <div className="mt-16 text-center">
+              <button
+                onClick={() => setshowmore(true)}
+                className="px-10 py-4 border rounded-2xl font-semibold hover:bg-gray-100"
+              >
+                더보기
+              </button>
+            </div>
+          )}
+
         </div>
       </section>
 
       <section className="px-6 pb-28">
-        <div className="mx-auto max-w-7xl rounded-[40px] bg-white p-10 text-black md:p-16">
-          <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center">
-            <div>
-              <p className="mb-4 text-sm font-bold text-zinc-500">
-                CUSTOM PROJECT
-              </p>
+        <div className="mx-auto max-w-7xl text-center">
 
-              <h2 className="text-4xl font-black leading-tight md:text-5xl">
-                비슷한 프로젝트를
-                <br />
-                준비 중이신가요?
-              </h2>
+          <h2 className="text-4xl font-bold mb-6">
+            비슷한 프로젝트를 준비 중이신가요?
+          </h2>
 
-              <p className="mt-6 max-w-2xl leading-8 text-zinc-600">
-                설치 장소, 원하는 이미지, 사용 목적을 알려주시면 제작 가능 여부와 진행 방향을 안내드립니다.
-              </p>
-            </div>
+          <p className="text-gray-500 mb-10">
+            원하는 이미지와 설치 환경을 알려주시면 제작 가능 여부를 안내드립니다.
+          </p>
 
-            <div className="flex md:justify-end">
-              <Link
-                href="/contact"
-                className="rounded-full bg-black px-9 py-4 font-bold text-white transition hover:bg-zinc-800"
-              >
-                제작 문의하기
-              </Link>
-            </div>
-          </div>
+          <Link
+            href="/contact"
+            className="inline-block px-10 py-4 bg-black text-white rounded-2xl font-semibold"
+          >
+            제작 문의하기
+          </Link>
+
         </div>
       </section>
+
     </main>
   );
 }

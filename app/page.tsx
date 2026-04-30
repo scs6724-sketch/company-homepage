@@ -139,64 +139,73 @@ export default function home() {
       </section>
 
       <section className="px-6 py-24">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-[40px] bg-white text-black">
+        <div className="mx-auto max-w-4xl overflow-hidden rounded-[36px] bg-white text-black">
           <div className="grid gap-0 md:grid-cols-2">
-            <div className="p-10 md:p-16">
+            <div className="p-8 md:p-10">
               <p className="mb-4 text-sm font-bold text-zinc-500">
                 CONTACT
               </p>
 
-              <h2 className="text-4xl font-black leading-tight md:text-5xl">
+              <h2 className="text-3xl font-black leading-tight md:text-4xl">
                 제작 상담이
                 <br />
                 필요하신가요?
               </h2>
 
-              <p className="mt-6 leading-8 text-zinc-600">
+              <p className="mt-5 leading-7 text-zinc-600">
                 원하시는 이미지, 설치 장소, 사용 목적을 남겨주시면 확인 후 연락드리겠습니다.
               </p>
 
               <Link
                 href="/contact"
-                className="mt-10 inline-block rounded-full bg-black px-8 py-4 font-bold text-white transition hover:bg-zinc-800"
+                className="mt-8 inline-block rounded-full bg-black px-6 py-3 font-bold text-white transition hover:bg-zinc-800"
               >
                 문의하기
               </Link>
             </div>
 
-            <div className="bg-neutral-100 p-10 md:p-16">
-              <h3 className="text-2xl font-black">Company Information</h3>
+            <div className="bg-neutral-100 p-8 md:p-10">
+              <h3 className="text-xl font-black">Company Information</h3>
 
-              <div className="mt-8 space-y-6">
+              <div className="mt-6 space-y-5 text-sm">
                 <div>
-                  <p className="text-sm text-zinc-500">상호명</p>
+                  <p className="text-zinc-500">상호명</p>
                   <p className="font-bold">케이라이트</p>
                 </div>
 
                 <div>
-                  <p className="text-sm text-zinc-500">대표</p>
+                  <p className="text-zinc-500">대표</p>
                   <p className="font-bold">서찬석</p>
                 </div>
 
                 <div>
-                  <p className="text-sm text-zinc-500">사업자등록번호</p>
+                  <p className="text-zinc-500">사업자등록번호</p>
                   <p className="font-bold">739-02-02662</p>
                 </div>
 
                 <div>
-                  <p className="text-sm text-zinc-500">주소</p>
+                  <p className="text-zinc-500">주소</p>
                   <p className="font-bold">
                     대전광역시 동구 동부로99, 1층 케이라이트
                   </p>
                 </div>
 
-                <a
-                  href="https://kko.to/UfFg41qVMo"
-                  target="_blank"
-                  className="inline-block rounded-full border border-black px-6 py-3 font-bold transition hover:bg-black hover:text-white"
-                >
-                  카카오맵으로 위치 보기
-                </a>
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+                  <a
+                    href="https://kko.to/UfFg41qVMo"
+                    target="_blank"
+                    className="inline-block rounded-full border border-black px-5 py-2 text-center text-sm font-bold transition hover:bg-black hover:text-white"
+                  >
+                    위치 보기
+                  </a>
+
+                  <div className="h-[120px] w-[120px] overflow-hidden rounded-2xl border bg-white shadow-sm">
+                    <iframe
+                      src="https://map.kakao.com/?q=%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%8F%99%EA%B5%AC%20%EB%8F%99%EB%B6%80%EB%A1%9C99"
+                      className="h-full w-full border-0 grayscale pointer-events-none"
+                    ></iframe>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
