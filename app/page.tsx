@@ -40,17 +40,17 @@ export default function home() {
 
         <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-center px-6">
           <p className="mb-5 w-fit rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm text-zinc-200 backdrop-blur">
-            고보라이트 · 이미지글래스 · 특수조명 전문 제작
+            고보라이트 · 이미지글래스 · 무빙젝터 · DMX · 투광등
           </p>
 
           <h1 className="max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
-            공간의 첫인상을 바꾸는
+            빛으로 공간의 인상을
             <br />
-            맞춤 조명 제작
+            설계합니다
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
-            케이라이트는 매장, 행사, 전시, 브랜드 공간에 필요한 고보라이트와 이미지글래스를 제작합니다.
+            경관조명을 기반으로 매장, 전시, 행사 공간에 맞는 조명 연출을 제안합니다.
           </p>
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -72,140 +72,139 @@ export default function home() {
         </div>
       </section>
 
-      <section className="px-6 py-24">
+      <section className="bg-gray-50 px-6 py-20 text-black">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <div>
-              <p className="mb-3 text-sm font-bold text-zinc-500">
+              <p className="mb-3 text-sm font-bold text-gray-400">
                 K-LIGHT PORTFOLIO
               </p>
+
               <h2 className="text-4xl font-black md:text-5xl">
-                주요 제작 이미지
+                실제 제작 이미지
               </h2>
             </div>
 
-            <p className="max-w-xl text-zinc-400">
-              실제 공간에 어울리는 밝기, 크기, 이미지 선명도를 고려해 제작합니다.
+            <p className="max-w-xl text-gray-500">
+              현장 환경과 조명 목적을 고려해 제작된 결과물입니다.
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-3">
             {images.map((image, i) => (
               <div
                 key={image}
-                className={`group overflow-hidden rounded-[32px] bg-neutral-900 ${
+                className={`overflow-hidden rounded-[28px] bg-white ${
                   i === 0 ? "md:col-span-2" : ""
                 }`}
               >
                 <img
                   src={image}
                   alt="케이라이트 제작 사례"
-                  className={`w-full object-cover transition duration-700 group-hover:scale-105 ${
-                    i === 0 ? "h-[520px]" : "h-[360px]"
+                  className={`w-full object-cover transition duration-700 hover:scale-105 ${
+                    i === 0 ? "h-[420px]" : "h-[320px]"
                   }`}
                 />
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      <section className="px-6 py-24">
-        <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-3">
-          <div className="rounded-[32px] border border-white/10 bg-white/[0.04] p-8">
-            <p className="text-4xl font-black">01</p>
-            <h3 className="mt-6 text-2xl font-bold">맞춤 제작</h3>
-            <p className="mt-4 leading-7 text-zinc-400">
-              로고, 문구, 이미지에 맞춰 고보라이트와 이미지글래스를 제작합니다.
-            </p>
-          </div>
-
-          <div className="rounded-[32px] border border-white/10 bg-white/[0.04] p-8">
-            <p className="text-4xl font-black">02</p>
-            <h3 className="mt-6 text-2xl font-bold">선명한 투사</h3>
-            <p className="mt-4 leading-7 text-zinc-400">
-              현장 환경에 맞는 밝기와 사이즈를 고려해 결과물을 제안합니다.
-            </p>
-          </div>
-
-          <div className="rounded-[32px] border border-white/10 bg-white/[0.04] p-8">
-            <p className="text-4xl font-black">03</p>
-            <h3 className="mt-6 text-2xl font-bold">빠른 상담</h3>
-            <p className="mt-4 leading-7 text-zinc-400">
-              문의 내용을 확인한 뒤 제작 가능 여부와 진행 방향을 안내드립니다.
-            </p>
+          <div className="mt-12 text-center">
+            <Link
+              href="/portfolio"
+              className="inline-block rounded-full bg-black px-8 py-4 font-bold text-white transition hover:bg-zinc-800"
+            >
+              포트폴리오 더보기
+            </Link>
           </div>
         </div>
       </section>
 
-      <section className="px-6 py-24">
-        <div className="mx-auto max-w-4xl overflow-hidden rounded-[36px] bg-white text-black">
-          <div className="grid gap-0 md:grid-cols-2">
-            <div className="p-8 md:p-10">
-              <p className="mb-4 text-sm font-bold text-zinc-500">
+      <section className="bg-white px-6 py-28 text-black">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-20 text-center md:grid-cols-3">
+            <div>
+              <p className="text-base font-semibold text-gray-400">01</p>
+              <h3 className="mt-6 text-3xl font-bold">제작 기준</h3>
+              <p className="mt-5 text-lg leading-8 text-gray-500">
+                현장 환경과 조명 목적을 기준으로 제작 방향을 설정합니다.
+              </p>
+            </div>
+
+            <div>
+              <p className="text-base font-semibold text-gray-400">02</p>
+              <h3 className="mt-6 text-3xl font-bold">이미지 디테일</h3>
+              <p className="mt-5 text-lg leading-8 text-gray-500">
+                선명도와 표현 방식을 고려해 결과물을 설계합니다.
+              </p>
+            </div>
+
+            <div>
+              <p className="text-base font-semibold text-gray-400">03</p>
+              <h3 className="mt-6 text-3xl font-bold">검수 과정</h3>
+              <p className="mt-5 text-lg leading-8 text-gray-500">
+                제작 후 결과 기준으로 품질을 확인합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-black px-6 py-20 text-white">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-12 md:grid-cols-2 md:items-center">
+            <div>
+              <p className="text-sm tracking-widest text-white/40">
                 CONTACT
               </p>
 
-              <h2 className="text-3xl font-black leading-tight md:text-4xl">
-                제작 상담이
-                <br />
-                필요하신가요?
+              <h2 className="mt-4 text-3xl font-bold leading-tight md:text-4xl">
+                제작 상담이 필요하신가요?
               </h2>
 
-              <p className="mt-5 leading-7 text-zinc-600">
-                원하시는 이미지, 설치 장소, 사용 목적을 남겨주시면 확인 후 연락드리겠습니다.
+              <p className="mt-5 leading-7 text-white/60">
+                제작 이미지, 설치 장소, 사용 목적을 알려주시면 확인 후 안내드립니다.
               </p>
 
               <Link
                 href="/contact"
-                className="mt-8 inline-block rounded-full bg-black px-6 py-3 font-bold text-white transition hover:bg-zinc-800"
+                className="mt-8 inline-block rounded-full bg-white px-7 py-3 font-semibold text-black transition hover:bg-zinc-200"
               >
                 문의하기
               </Link>
             </div>
 
-            <div className="bg-neutral-100 p-8 md:p-10">
-              <h3 className="text-xl font-black">Company Information</h3>
+            <div className="space-y-4 border-t border-white/10 pt-6 text-sm md:border-none md:pt-0">
+              <div className="flex justify-between gap-6">
+                <span className="text-white/40">상호명</span>
+                <span>케이라이트</span>
+              </div>
 
-              <div className="mt-6 space-y-5 text-sm">
-                <div>
-                  <p className="text-zinc-500">상호명</p>
-                  <p className="font-bold">케이라이트</p>
-                </div>
+              <div className="flex justify-between gap-6">
+                <span className="text-white/40">대표</span>
+                <span>서찬석</span>
+              </div>
 
-                <div>
-                  <p className="text-zinc-500">대표</p>
-                  <p className="font-bold">서찬석</p>
-                </div>
+              <div className="flex justify-between gap-6">
+                <span className="text-white/40">사업자번호</span>
+                <span>739-02-02662</span>
+              </div>
 
-                <div>
-                  <p className="text-zinc-500">사업자등록번호</p>
-                  <p className="font-bold">739-02-02662</p>
-                </div>
+              <div className="flex justify-between gap-6">
+                <span className="text-white/40">주소</span>
+                <span className="text-right">
+                  대전광역시 동구 동부로99
+                </span>
+              </div>
 
-                <div>
-                  <p className="text-zinc-500">주소</p>
-                  <p className="font-bold">
-                    대전광역시 동구 동부로99, 1층 케이라이트
-                  </p>
-                </div>
-
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                  <a
-                    href="https://kko.to/UfFg41qVMo"
-                    target="_blank"
-                    className="inline-block rounded-full border border-black px-5 py-2 text-center text-sm font-bold transition hover:bg-black hover:text-white"
-                  >
-                    위치 보기
-                  </a>
-
-                  <div className="h-[120px] w-[120px] overflow-hidden rounded-2xl border bg-white shadow-sm">
-                    <iframe
-                      src="https://map.kakao.com/?q=%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%8F%99%EA%B5%AC%20%EB%8F%99%EB%B6%80%EB%A1%9C99"
-                      className="h-full w-full border-0 grayscale pointer-events-none"
-                    ></iframe>
-                  </div>
-                </div>
+              <div className="pt-4">
+                <a
+                  href="https://kko.to/UfFg41qVMo"
+                  target="_blank"
+                  className="inline-block rounded-full border border-white/30 px-4 py-2 text-xs font-semibold transition hover:bg-white hover:text-black"
+                >
+                  위치 보기
+                </a>
               </div>
             </div>
           </div>
