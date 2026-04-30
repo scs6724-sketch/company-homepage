@@ -76,7 +76,7 @@ export default function portfolio() {
           </h1>
 
           <p className="text-lg text-gray-500 max-w-2xl leading-8">
-            다양한 현장에서 적용된 고보라이트 및 이미지글래스 제작 사례입니다.
+            다년간 수많은 현장에서 적용된 고보라이트 및 이미지글래스 제작 사례입니다.
           </p>
         </div>
       </section>

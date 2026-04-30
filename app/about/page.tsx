@@ -20,17 +20,39 @@ export default function about() {
     <main className="bg-white text-black">
       <section className="px-6 py-32">
         <div className="mx-auto max-w-7xl">
-          <p className="mb-4 text-sm font-bold text-gray-400">ABOUT K-LIGHT</p>
+          <p className="mb-4 text-sm font-bold text-blue-500">
+            ABOUT K-LIGHT
+          </p>
 
-          <h1 className="max-w-4xl text-5xl font-bold leading-tight md:text-6xl">
-            다양한 현장에서 검증된
+          <h1 className="max-w-4xl text-5xl font-black leading-tight md:text-6xl">
+            결과로 증명하는
             <br />
             이미지글래스 제작 전문기업
           </h1>
 
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-500">
+          <p className="mt-6 max-w-5xl text-lg leading-8 text-gray-500">
             케이라이트는 이미지글래스 제작을 중심으로 고보조명, 경관조명, 특수조명 분야에서 다양한 현장 경험을 쌓아온 제작 전문 업체입니다.
           </p>
+
+          <div className="mt-12 grid max-w-5xl gap-4 md:grid-cols-3">
+            <div className="rounded-3xl border border-blue-100 bg-blue-50 p-6">
+              <p className="text-4xl font-black text-blue-600">100,000+</p>
+              <p className="mt-2 font-bold text-gray-900">누적 제작 건수</p>
+              <p className="mt-2 text-sm text-gray-500">정밀 제작 경험</p>
+            </div>
+
+            <div className="rounded-3xl border border-cyan-100 bg-cyan-50 p-6">
+              <p className="text-4xl font-black text-cyan-600">100+</p>
+              <p className="mt-2 font-bold text-gray-900">전국 협력 파트너사</p>
+              <p className="mt-2 text-sm text-gray-500">현장 대응 네트워크</p>
+            </div>
+
+            <div className="rounded-3xl border border-indigo-100 bg-indigo-50 p-6">
+              <p className="text-4xl font-black text-indigo-600">7년+</p>
+              <p className="mt-2 font-bold text-gray-900">전문 제작 경력</p>
+              <p className="mt-2 text-sm text-gray-500">전문가 중심 제작</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -45,7 +67,9 @@ export default function about() {
           </div>
 
           <div>
-            <p className="mb-4 text-sm font-bold text-gray-400">EXPERIENCE</p>
+            <p className="mb-4 text-sm font-bold text-gray-400">
+              EXPERIENCE
+            </p>
 
             <h2 className="text-4xl font-bold leading-tight">
               제작부터 현장 적용까지
@@ -53,19 +77,24 @@ export default function about() {
               결과를 고려합니다
             </h2>
 
-            <div className="mt-8 space-y-5 text-lg leading-8 text-gray-600">
-              <p>
-                케이라이트는 단순히 이미지를 제작하는 것에 그치지 않고, 실제 조명 투사 환경에서 선명하게 보일 수 있는 결과물을 목표로 합니다.
-              </p>
+            <div className="mt-8 space-y-6 text-lg leading-8 text-gray-600">
 
-              <p>
-                매장, 전시장, 행사장, 건축 공간, 사인 업체 등 다양한 파트너와 협업하며 현장 목적에 맞는 이미지글래스와 조명 솔루션을 제공해왔습니다.
-              </p>
+  <p>
+    케이라이트는 단순한 이미지 제작이 아닌,<br />
+    <span className="font-semibold text-black">실제 조명 환경에서 완성되는 결과</span>를 기준으로 제작합니다.
+  </p>
 
-              <p>
-                로고, 문구, 안내 이미지, 패턴 등 고객의 브랜드 요소가 공간 안에서 자연스럽게 표현될 수 있도록 제작 품질과 적용성을 함께 고려합니다.
-              </p>
-            </div>
+  <p>
+    매장, 전시장, 행사장, 건축 공간 등 다양한 현장에서의 경험을 바탕으로,<br />
+    <span className="font-semibold text-black">공간 목적에 맞는 최적의 결과</span>를 제안합니다.
+  </p>
+
+  <p>
+    로고, 문구, 패턴 등 브랜드 요소가 자연스럽게 표현될 수 있도록<br />
+    <span className="font-semibold text-black">디테일과 완성도</span>를 끝까지 책임집니다.
+  </p>
+
+</div>
           </div>
         </div>
       </section>
@@ -103,7 +132,9 @@ export default function about() {
       <section className="px-6 py-28">
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.9fr_1.1fr] md:items-center">
           <div>
-            <p className="mb-4 text-sm font-bold text-gray-400">PARTNERSHIP</p>
+            <p className="mb-4 text-sm font-bold text-gray-400">
+              PARTNERSHIP
+            </p>
 
             <h2 className="text-4xl font-bold leading-tight md:text-5xl">
               다양한 업종과 함께한
@@ -112,8 +143,9 @@ export default function about() {
             </h2>
 
             <p className="mt-6 leading-8 text-gray-500">
-              케이라이트는 여러 업종의 고객과 협력하며 공간 목적에 맞는 결과물을 제작해왔습니다.
-            </p>
+  케이라이트는 여러 업종의 고객과 협력하며 <br />
+  공간 목적에 맞는 결과물을 제작해왔습니다.
+</p>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
@@ -196,7 +228,7 @@ export default function about() {
 
             <div className="rounded-3xl bg-gradient-to-br from-cyan-50 to-white p-8">
               <p className="mb-4 text-4xl font-black text-cyan-600">03</p>
-              <p className="font-bold">빠른 상담</p>
+              <p className="font-bold">친절하고 빠른 상담</p>
               <p className="mt-2 text-gray-500">신속한 응대</p>
             </div>
           </div>
@@ -210,18 +242,18 @@ export default function about() {
           </p>
 
           <h2 className="mb-12 text-4xl font-bold text-gray-900 md:text-5xl">
-            숫자로 보는 케이라이트
+            DATA & PERFORMANCE
           </h2>
 
           <div className="grid gap-8 md:grid-cols-3">
             <div className="rounded-3xl bg-white p-8 shadow-md">
-              <p className="mb-3 text-5xl font-black text-blue-600">100+</p>
-              <p className="font-medium text-gray-500">제작 프로젝트</p>
+              <p className="mb-3 text-5xl font-black text-blue-600">100,000+</p>
+              <p className="font-medium text-gray-500">누적 제작 건수</p>
             </div>
 
             <div className="rounded-3xl bg-white p-8 shadow-md">
-              <p className="mb-3 text-5xl font-black text-blue-600">다수</p>
-              <p className="font-medium text-gray-500">협력 업체</p>
+              <p className="mb-3 text-5xl font-black text-blue-600">100+</p>
+              <p className="font-medium text-gray-500">협력 파트너사</p>
             </div>
 
             <div className="rounded-3xl bg-white p-8 shadow-md">
@@ -236,9 +268,9 @@ export default function about() {
         <div className="mx-auto max-w-7xl rounded-[40px] bg-black p-10 text-white md:p-16">
           <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center">
             <div>
-              <h2 className="text-4xl font-bold md:text-5xl">
-                프로젝트 상담이 필요하신가요?
-              </h2>
+              <h2 className="text-4xl font-bold md:text-5xl whitespace-nowrap">
+  프로젝트 상담이 필요하신가요?
+</h2>
 
               <p className="mt-6 text-zinc-400">
                 제작 이미지, 설치 장소, 목적을 알려주시면 상담드립니다.
