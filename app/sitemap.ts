@@ -17,6 +17,10 @@ export default function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: "https://k-lights.net/portfolio",
+      lastModified: new Date(),
+    },
+    {
       url: "https://k-lights.net/contact",
       lastModified: new Date(),
     },
