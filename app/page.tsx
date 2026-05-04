@@ -197,7 +197,7 @@ export default function home() {
 
             <div className="mt-7 flex flex-col gap-3">
               <a
-                href="https://pf.kakao.com/너채널"
+                href="https://pf.kakao.com/_Ajxlgxj"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-2xl bg-yellow-400 px-6 py-4 font-bold text-black"
