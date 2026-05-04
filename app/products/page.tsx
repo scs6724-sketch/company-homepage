@@ -54,9 +54,9 @@ export default function products() {
     {
       title: "DMX",
       slides: [
-        { type: "image", src: "/images/3.jpg" },
-        { type: "image", src: "/images/4.jpg" },
-        { type: "image", src: "/images/5.jpg" },
+        { type: "video", src: "/videos/dmx1.mp4" },
+        { type: "video", src: "/videos/dmx2.mp4" },
+        { type: "video", src: "/videos/dmx3.mp4" },
       ] as slide[],
       desc: "조명 장비를 전문적으로 제어하는 시스템입니다.",
       detail:
@@ -146,7 +146,11 @@ export default function products() {
                           loop
                           muted
                           playsInline
-                          className="aspect-square w-full object-cover"
+                          className={`aspect-square w-full ${
+                            item.title === "DMX"
+                              ? "object-contain bg-black"
+                              : "object-cover"
+                          }`}
                         />
                       ) : (
                         <img

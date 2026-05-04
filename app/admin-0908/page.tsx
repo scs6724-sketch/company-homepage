@@ -1,6 +1,12 @@
 import Deletebutton from "./deletebutton";
 import { supabase } from "@/lib/supabase";
 import { cookies } from "next/headers";
+import { createClient } from "@supabase/supabase-js";
+
+const supabaseClient = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+);
 
 export default async function AdminPage() {
   const cookieStore = await cookies();
@@ -26,6 +32,18 @@ export default async function AdminPage() {
     );
   }
 
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const { count: todaycount } = await supabaseClient
+    .from("visitor_logs")
+    .select("*", { count: "exact", head: true })
+    .gte("created_at", today.toISOString());
+
+  const { count: totalcount } = await supabaseClient
+    .from("visitor_logs")
+    .select("*", { count: "exact", head: true });
+
   const { data: inquiries, error } = await supabase
     .from("inquiries")
     .select("*")
@@ -45,6 +63,20 @@ export default async function AdminPage() {
         </button>
       </form>
 
+      {/* 방문자 통계 */}
+      <div className="mb-8 grid grid-cols-2 gap-4">
+        <div className="rounded-2xl bg-black p-6 text-white">
+          <p className="text-sm text-white/60">TODAY</p>
+          <p className="mt-2 text-3xl font-bold">{todaycount ?? 0}</p>
+        </div>
+
+        <div className="rounded-2xl bg-white p-6 shadow">
+          <p className="text-sm text-gray-500">TOTAL</p>
+          <p className="mt-2 text-3xl font-bold">{totalcount ?? 0}</p>
+        </div>
+      </div>
+
+      {/* 문의 목록 */}
       <div className="space-y-4">
         {inquiries?.map((item) => (
           <div key={item.id} className="rounded-xl bg-white p-5 shadow">

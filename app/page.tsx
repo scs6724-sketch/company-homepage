@@ -13,6 +13,7 @@ export default function home() {
   ];
 
   const [index, setindex] = useState(0);
+  const [open, setopen] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -147,69 +148,83 @@ export default function home() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
 
-      <section className="bg-black px-6 py-20 text-white">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid gap-12 md:grid-cols-2 md:items-center">
-            <div>
-              <p className="text-sm tracking-widest text-white/40">
-                CONTACT
-              </p>
+          <div className="mt-20 mb-4 text-center">
 
-              <h2 className="mt-4 text-3xl font-bold leading-tight md:text-4xl">
-                제작 상담이 필요하신가요?
-              </h2>
+  <div className="mx-auto mb-6 h-[1.5px] w-16 bg-gray-300"></div>
 
-              <p className="mt-5 leading-7 text-white/60">
-                제작 이미지, 설치 장소, 사용 목적을 알려주시면 확인 후 안내드립니다.
-              </p>
+  <h3 className="text-3xl font-bold text-gray-900">
+    디자인 파일이 없어도 괜찮습니다.
+  </h3>
 
-              <Link
-                href="/contact"
-                className="mt-8 inline-block rounded-full bg-white px-7 py-3 font-semibold text-black transition hover:bg-zinc-200"
-              >
-                문의하기
-              </Link>
-            </div>
+            <p className="mt-4 text-gray-500 leading-7">
+              참고 <span className="font-semibold text-black">사진 한 장</span>만으로도 번거로움 없이 제작용 디자인을 도와드립니다.
+              <br />
+              <span className="font-semibold text-black">평균 30분 내</span> 제작 가능 여부를 안내드립니다.
+            </p>
 
-            <div className="space-y-4 border-t border-white/10 pt-6 text-sm md:border-none md:pt-0">
-              <div className="flex justify-between gap-6">
-                <span className="text-white/40">상호명</span>
-                <span>케이라이트</span>
-              </div>
+            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
 
-              <div className="flex justify-between gap-6">
-                <span className="text-white/40">대표</span>
-                <span>서찬석</span>
-              </div>
+  <button
+    onClick={() => setopen(true)}
+    className="rounded-full border border-black px-10 py-4 font-semibold text-black transition-all duration-300 hover:bg-black hover:text-white"
+  >
+    파일 보내기
+  </button>
 
-              <div className="flex justify-between gap-6">
-                <span className="text-white/40">사업자번호</span>
-                <span>739-02-02662</span>
-              </div>
+  <Link
+    href="/contact"
+    className="rounded-full border border-gray-300 px-10 py-4 font-semibold text-gray-700 transition-all duration-300 hover:border-black hover:text-black"
+  >
+    상담 문의하기
+  </Link>
 
-              <div className="flex justify-between gap-6">
-                <span className="text-white/40">주소</span>
-                <span className="text-right">
-                  대전광역시 동구 동부로99
-                </span>
-              </div>
-
-              <div className="pt-4">
-                <a
-                  href="https://kko.to/UfFg41qVMo"
-                  target="_blank"
-                  className="inline-block rounded-full border border-white/30 px-4 py-2 text-xs font-semibold transition hover:bg-white hover:text-black"
-                >
-                  위치 보기
-                </a>
-              </div>
-            </div>
+</div>
           </div>
         </div>
       </section>
+
+      {open && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-6">
+          <div className="w-full max-w-sm rounded-3xl bg-white p-7 text-center shadow-2xl">
+            <h3 className="text-2xl font-bold text-black">
+              파일 보내기
+            </h3>
+
+            <p className="mt-3 leading-7 text-gray-500">
+              편하신 방법으로 참고 사진이나 이미지를 보내주세요.
+            </p>
+
+            <div className="mt-7 flex flex-col gap-3">
+              <a
+                href="https://pf.kakao.com/너채널"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-2xl bg-yellow-400 px-6 py-4 font-bold text-black"
+              >
+                카카오톡 채널로 보내기
+              </a>
+
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText("k-lights@daum.net");
+                  alert("이메일 주소가 복사되었습니다");
+                }}
+                className="rounded-2xl border border-gray-200 px-6 py-4 font-bold text-black"
+              >
+                이메일 주소 복사
+              </button>
+            </div>
+
+            <button
+              onClick={() => setopen(false)}
+              className="mt-6 text-sm font-bold text-gray-400"
+            >
+              닫기
+            </button>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
