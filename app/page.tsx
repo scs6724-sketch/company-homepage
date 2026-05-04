@@ -54,6 +54,10 @@ export default function home() {
             경관조명을 기반으로 매장, 전시, 행사 공간에 맞는 조명 연출을 제안합니다.
           </p>
 
+          <p className="mt-4 max-w-2xl text-base leading-7 text-zinc-400">
+            고보라이트 제작, 고보조명 설치, 바닥광고 조명, 고보조명 렌즈 제작까지 현장 목적에 맞게 안내드립니다.
+          </p>
+
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Link
               href="/contact"
@@ -150,12 +154,11 @@ export default function home() {
           </div>
 
           <div className="mt-20 mb-4 text-center">
+            <div className="mx-auto mb-6 h-[1.5px] w-16 bg-gray-300"></div>
 
-  <div className="mx-auto mb-6 h-[1.5px] w-16 bg-gray-300"></div>
-
-  <h3 className="text-3xl font-bold text-gray-900">
-    디자인 파일이 없어도 괜찮습니다.
-  </h3>
+            <h3 className="text-3xl font-bold text-gray-900">
+              디자인 파일이 없어도 괜찮습니다.
+            </h3>
 
             <p className="mt-4 text-gray-500 leading-7">
               참고 <span className="font-semibold text-black">사진 한 장</span>만으로도 번거로움 없이 제작용 디자인을 도와드립니다.
@@ -164,22 +167,20 @@ export default function home() {
             </p>
 
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <button
+                onClick={() => setopen(true)}
+                className="rounded-full border border-black px-10 py-4 font-semibold text-black transition-all duration-300 hover:bg-black hover:text-white"
+              >
+                파일 보내기
+              </button>
 
-  <button
-    onClick={() => setopen(true)}
-    className="rounded-full border border-black px-10 py-4 font-semibold text-black transition-all duration-300 hover:bg-black hover:text-white"
-  >
-    파일 보내기
-  </button>
-
-  <Link
-    href="/contact"
-    className="rounded-full border border-gray-300 px-10 py-4 font-semibold text-gray-700 transition-all duration-300 hover:border-black hover:text-black"
-  >
-    상담 문의하기
-  </Link>
-
-</div>
+              <Link
+                href="/contact"
+                className="rounded-full border border-gray-300 px-10 py-4 font-semibold text-gray-700 transition-all duration-300 hover:border-black hover:text-black"
+              >
+                상담 문의하기
+              </Link>
+            </div>
           </div>
         </div>
       </section>

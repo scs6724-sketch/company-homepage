@@ -10,9 +10,26 @@ const Footer = footer;
 const Visittracker = visittracker;
 
 export const metadata = {
-  title: "고보라이트 · 이미지글래스 제작 | 케이라이트",
+  title: "케이라이트 | 고보라이트 · 이미지글래스 제작",
   description:
-    "고보라이트, 이미지글래스, 무빙젝터, DMX 조명 제작 전문 케이라이트. 매장, 행사, 전시 공간 맞춤 조명 설계 및 제작.",
+    "고보라이트 제작, 고보조명 설치, 바닥광고 조명, 이미지글래스 제작 전문 케이라이트",
+
+  openGraph: {
+    title: "케이라이트 | 고보라이트 · 이미지글래스 제작",
+    description:
+      "고보라이트 제작, 고보조명, 바닥광고 조명, 이미지글래스 제작 전문",
+    url: "https://k-lights.net",
+    siteName: "케이라이트",
+    images: [
+      {
+        url: "https://k-lights.net/images/1.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "ko_KR",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
