@@ -13,9 +13,6 @@ export const metadata = {
   title: "고보라이트 · 이미지글래스 제작 | 케이라이트",
   description:
     "고보라이트, 이미지글래스, 무빙젝터, DMX 조명 제작 전문 케이라이트. 매장, 행사, 전시 공간 맞춤 조명 설계 및 제작.",
-  verification: {
-    naver: "d5833c19331966b9d17d0a53c430d5eb5fe49ccd", // 여기 코드 넣기
-  },
 };
 
 export default function RootLayout({
@@ -25,6 +22,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
+      <head>
+        <meta
+          name="naver-site-verification"
+          content="d5833c19331966b9d17d0a53c430d5eb5fe49ccd"
+        />
+      </head>
       <body>
         <Visittracker />
         <Siteheader />
